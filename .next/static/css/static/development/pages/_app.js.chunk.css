@@ -1,0 +1,134 @@
+.data {
+  background-color: white !important;
+  color: red;
+}
+.card {
+  background-color: white !important;
+  margin-top: 10% !important;
+  /* margin-bottom: 10% !important; */
+  margin-right: 10% !important;
+  margin-left: 10% !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.login-title {
+  margin: auto;
+}
+.profile-card {
+  background-color: white !important;
+  margin-top: 10% !important;
+  margin-right: 10% !important;
+  margin-left: 10% !important;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+  display: flex !important;
+  flex-direction: column;
+}
+.name {
+  margin: auto !important;
+  padding-top: 1% !important;
+}
+.card-img {
+  display: flex;
+  /* establish flex container */
+  flex-direction: column;
+  /* make main axis vertical */
+  justify-content: center;
+  /* center items vertically, in this case */
+  align-items: center;
+  /* center items horizontally, in this case */
+}
+.profile-img {
+  height: 300px !important;
+  width: 100% !important;
+}
+.navbar {
+  background-color: royalblue !important;
+  position: fixed !important;
+  width: 100% !important;
+  /* height: 10% !important; */
+  z-index: 10;
+}
+.p-10 {
+  padding-top: 0.5% !important;
+  padding-bottom: 0.5% !important;
+}
+.search-area {
+  background-color: white !important;
+  /* display: flex !important;
+  flex-direction: row; */
+}
+.input-fld {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  width: 90% !important;
+}
+/* .input-fld:focus {
+  outline: none !important;
+} */
+.input-focus {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+  outline: none !important;
+  width: 90% !important;
+}
+.btn-focus {
+  width: 10% !important;
+  background-color: #7094db;
+  text-align: center;
+  color: white;
+}
+.search-button {
+  width: 10% !important;
+  background-color: lightgray;
+  text-align: center;
+}
+.search-button:hover {
+  cursor: pointer;
+}
+.btn-focus:hover {
+  cursor: pointer;
+}
+.search-box {
+  display: flex;
+  flex-direction: row;
+}
+.sidenav {
+  margin-top: 5% !important;
+}
+.password {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: hidden;
+}
+.btn-submit {
+  /* padding-left: 10% !important; */
+  /* padding-right: 10% !important; */
+  width: 100% !important;
+  margin-bottom: 2% !important;
+  border-radius: 10px;
+  color: white !important;
+  background-color: #00cc99 !important;
+}
+.line {
+  /* background-color: red; */
+  /* width: 90% !important; */
+  margin-top: 1px;
+}
+.input-icon {
+  margin-top: 20px !important;
+  margin-left: 2px !important;
+}
+.form-login {
+  padding: 2% !important;
+}
+
+
+/*# sourceMappingURL=_app.js.chunk.css.map*/
