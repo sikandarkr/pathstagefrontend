@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\index.js"],{
 
 /***/ "./components/Common/Input.js":
 /*!************************************!*\
@@ -53,7 +53,8 @@ var Input = /*#__PURE__*/function (_Component) {
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "state", {
       buttonCss: "search-button",
-      inputCss: "input-fld"
+      inputCss: "input-fld",
+      inputText: ''
     });
 
     Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "handleClick", function () {
@@ -70,6 +71,18 @@ var Input = /*#__PURE__*/function (_Component) {
       });
     });
 
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "handleChange", function (e) {
+      _this.setState({
+        inputText: e.target.value
+      });
+
+      event.preventDefault();
+    });
+
+    Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_8__["default"])(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this), "onSubmit", function (e) {
+      console.log(_this.state.inputText);
+    });
+
     return _this;
   }
 
@@ -81,12 +94,18 @@ var Input = /*#__PURE__*/function (_Component) {
         className: "search-box"
       }, __jsx("input", {
         type: "text",
+        inputText: this.state.inputText,
         placeholder: this.props.placeholder,
         className: this.state.inputCss,
         onClick: this.handleClick,
-        onBlur: this.handleInputBlur
-      }), __jsx("span", {
-        className: this.state.buttonCss
+        onBlur: this.handleInputBlur,
+        onChange: this.handleChange
+      }), __jsx("button", {
+        className: this.state.buttonCss,
+        style: {
+          border: "none"
+        },
+        onClick: this.onSubmit
       }, __jsx(antd_lib_icon__WEBPACK_IMPORTED_MODULE_1___default.a, {
         style: {
           fontSize: "20px"
@@ -483,7 +502,7 @@ var initialData = {
     content: "Take out the garbage3"
   }]
 };
-/* harmony default export */ __webpack_exports__["default"] = (initialData);
+/* harmony default export */ __webpack_exports__["default"] = (initialData); ///comment
 
 /***/ }),
 
@@ -33584,10 +33603,10 @@ module.exports = (__webpack_require__(/*! dll-reference dll_82519ec661270f7f484f
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fsikandarkumarkumar%2FDesktop%2Fbackup%2Fexampl%2Fpages%2Findex.js!./":
-/*!*****************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fsikandarkumarkumar%2FDesktop%2Fbackup%2Fexampl%2Fpages%2Findex.js ***!
-  \*****************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CRANJEET_DON%5CDocuments%5Cexampl%5Cexampl%5Cpages%5Cindex.js!./":
+/*!****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CRANJEET_DON%5CDocuments%5Cexampl%5Cexampl%5Cpages%5Cindex.js ***!
+  \****************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -51598,14 +51617,14 @@ var fetchProfiles = function fetchProfiles(data, browserHistory) {
 
 /***/ }),
 
-/***/ 4:
-/*!*********************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fsikandarkumarkumar%2FDesktop%2Fbackup%2Fexampl%2Fpages%2Findex.js ***!
-  \*********************************************************************************************************************************************/
+/***/ 3:
+/*!********************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CRANJEET_DON%5CDocuments%5Cexampl%5Cexampl%5Cpages%5Cindex.js ***!
+  \********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fsikandarkumarkumar%2FDesktop%2Fbackup%2Fexampl%2Fpages%2Findex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=%2FUsers%2Fsikandarkumarkumar%2FDesktop%2Fbackup%2Fexampl%2Fpages%2Findex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CRANJEET_DON%5CDocuments%5Cexampl%5Cexampl%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CRANJEET_DON%5CDocuments%5Cexampl%5Cexampl%5Cpages%5Cindex.js!./");
 
 
 /***/ }),
@@ -51621,5 +51640,5 @@ module.exports = dll_82519ec661270f7f484f;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js","styles"]]]);
+},[[3,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map

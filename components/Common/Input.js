@@ -4,7 +4,9 @@ import { Tooltip, Icon } from "antd";
 class Input extends Component {
   state = {
     buttonCss: "search-button",
-    inputCss: "input-fld"
+    inputCss: "input-fld",
+    inputText:''
+
   };
   handleClick = () => {
     this.setState({
@@ -18,20 +20,30 @@ class Input extends Component {
       buttonCss: "search-button"
     });
   };
+  handleChange=(e)=>{
+    this.setState({inputText:e.target.value})
+    event.preventDefault();
+  }
+  onSubmit=(e)=>{
+     
+     console.log(this.state.inputText)
+  }
   render() {
     const { users } = this.props;
     return (
       <div className="search-box">
         <input
           type="text"
+          inputText={this.state.inputText}
           placeholder={this.props.placeholder}
           className={this.state.inputCss}
           onClick={this.handleClick}
           onBlur={this.handleInputBlur}
+          onChange={this.handleChange}
         />
-        <span className={this.state.buttonCss}>
+        <button className={this.state.buttonCss} style={{ border: "none" }} onClick={this.onSubmit}>
           <Icon style={{ fontSize: "20px" }} type="search" />
-        </span>
+        </button>
       </div>
     );
   }

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -123,7 +123,8 @@ class Input extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
 
     _defineProperty(this, "state", {
       buttonCss: "search-button",
-      inputCss: "input-fld"
+      inputCss: "input-fld",
+      inputText: ''
     });
 
     _defineProperty(this, "handleClick", () => {
@@ -139,6 +140,17 @@ class Input extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
         buttonCss: "search-button"
       });
     });
+
+    _defineProperty(this, "handleChange", e => {
+      this.setState({
+        inputText: e.target.value
+      });
+      event.preventDefault();
+    });
+
+    _defineProperty(this, "onSubmit", e => {
+      console.log(this.state.inputText);
+    });
   }
 
   render() {
@@ -149,12 +161,18 @@ class Input extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
       className: "search-box"
     }, __jsx("input", {
       type: "text",
+      inputText: this.state.inputText,
       placeholder: this.props.placeholder,
       className: this.state.inputCss,
       onClick: this.handleClick,
-      onBlur: this.handleInputBlur
-    }), __jsx("span", {
-      className: this.state.buttonCss
+      onBlur: this.handleInputBlur,
+      onChange: this.handleChange
+    }), __jsx("button", {
+      className: this.state.buttonCss,
+      style: {
+        border: "none"
+      },
+      onClick: this.onSubmit
     }, __jsx(antd_lib_icon__WEBPACK_IMPORTED_MODULE_1___default.a, {
       style: {
         fontSize: "20px"
@@ -453,7 +471,7 @@ const initialData = {
     content: "Take out the garbage3"
   }]
 };
-/* harmony default export */ __webpack_exports__["default"] = (initialData);
+/* harmony default export */ __webpack_exports__["default"] = (initialData); ///comment
 
 /***/ }),
 
@@ -957,14 +975,14 @@ const fetchProfiles = (data, browserHistory) => {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/sikandarkumarkumar/Desktop/backup/exampl/pages/index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! C:\Users\RANJEET_DON\Documents\exampl\exampl\pages\index.js */"./pages/index.js");
 
 
 /***/ }),
