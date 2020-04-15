@@ -41,8 +41,8 @@ class Input extends Component {
           onBlur={this.handleInputBlur}
           onChange={this.handleChange}
         />
-        <button className={this.state.buttonCss} style={{ border: "none" }} onClick={this.onSubmit}>
-          <Icon style={{ fontSize: "20px" }} type="search" />
+        <button className={this.state.buttonCss}  onClick={this.onSubmit}>
+          <Icon className="icon"  type="search" />
         </button>
       </div>
     );

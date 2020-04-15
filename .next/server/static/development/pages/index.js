@@ -169,14 +169,9 @@ class Input extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
       onChange: this.handleChange
     }), __jsx("button", {
       className: this.state.buttonCss,
-      style: {
-        border: "none"
-      },
       onClick: this.onSubmit
     }, __jsx(antd_lib_icon__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      style: {
-        fontSize: "20px"
-      },
+      className: "icon",
       type: "search"
     })));
   }
