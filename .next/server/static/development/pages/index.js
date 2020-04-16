@@ -116,6 +116,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+//import phonix from '../../logo/phonix.jpg'
 // import "../../static/css/style.scss";
 class Input extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
   constructor(...args) {
@@ -788,9 +789,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd_lib_col__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(antd_lib_col__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-redux */ "react-redux");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _Common_Input__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Common/Input */ "./components/Common/Input.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ant-design/icons */ "@ant-design/icons");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-redux */ "react-redux");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _Common_Input__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Common/Input */ "./components/Common/Input.js");
 
 
 
@@ -799,7 +802,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
-// import { fetchProfiles } from "../../redux/actions/dashboardAction";
+//import {images} from '../../static/images/phonix.jpg'
+ // import { fetchProfiles } from "../../redux/actions/dashboardAction";
+
 
 
 
@@ -823,9 +828,15 @@ class Navbar extends react__WEBPACK_IMPORTED_MODULE_6__["Component"] {
       xs: 24
     }, __jsx("div", {
       className: "search-area"
-    }, __jsx(_Common_Input__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    }, __jsx(_Common_Input__WEBPACK_IMPORTED_MODULE_9__["default"], {
       placeholder: "Search"
-    })))))));
+    }))), __jsx(antd_lib_col__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      span: 0,
+      md: 4,
+      xs: 0
+    }, __jsx("span", {
+      className: "UserOutlined"
+    }, __jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_7__["UserOutlined"], null)))))));
   }
 
 }
@@ -843,7 +854,7 @@ function mapDispatchToProps(dispatch) {//   return {
   //   };
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["connect"])(mapStateToProps, mapDispatchToProps)(Navbar));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_8__["connect"])(mapStateToProps, mapDispatchToProps)(Navbar));
 
 /***/ }),
 
@@ -979,6 +990,17 @@ const fetchProfiles = (data, browserHistory) => {
 
 module.exports = __webpack_require__(/*! C:\Users\RANJEET_DON\Documents\exampl\exampl\pages\index.js */"./pages/index.js");
 
+
+/***/ }),
+
+/***/ "@ant-design/icons":
+/*!************************************!*\
+  !*** external "@ant-design/icons" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@ant-design/icons");
 
 /***/ }),
 

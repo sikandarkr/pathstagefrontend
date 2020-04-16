@@ -4,3 +4,10 @@
 .icon{
     font-size: 20px;
 }
+.UserOutlined{
+     border-radius: 50%;
+    margin-left: 550px;
+    background-color: white;
+    font-size: 18px;
+    background-color:lightgray;
+}

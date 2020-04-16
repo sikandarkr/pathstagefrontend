@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Breadcrumb, Icon, Row, Col, Layout, Card, Carousel, Button, Divider } from "antd";
+//import {images} from '../../static/images/phonix.jpg'
+import {UserOutlined} from '@ant-design/icons'
 // import { fetchProfiles } from "../../redux/actions/dashboardAction";
 import { connect } from "react-redux";
 import Input from "../Common/Input";
@@ -14,7 +16,15 @@ class Navbar extends Component {
               <Col span={8} md={8} xs={24}>
                 <div className="search-area">
                   <Input placeholder="Search" />
+                  
                 </div>
+              </Col>
+              <Col span={0} md={4} xs={0}>
+               
+                  <span className="UserOutlined">
+        <UserOutlined />
+       
+                </span>
               </Col>
             </Row>
           </Col>

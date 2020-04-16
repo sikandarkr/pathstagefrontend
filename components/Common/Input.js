@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { Tooltip, Icon } from "antd";
+
+//import phonix from '../../logo/phonix.jpg'
+
 // import "../../static/css/style.scss";
 class Input extends Component {
   state = {
@@ -32,6 +35,9 @@ class Input extends Component {
     const { users } = this.props;
     return (
       <div className="search-box">
+        
+  {/* <img src={phonix} /> */}
+  {/* <Icon component={() => (<img src="../../static/phonix.jpg"/>)} style={{fontSize:'20px'}}/> */}
         <input
           type="text"
           inputText={this.state.inputText}
@@ -44,7 +50,10 @@ class Input extends Component {
         <button className={this.state.buttonCss}  onClick={this.onSubmit}>
           <Icon className="icon"  type="search" />
         </button>
+        
       </div>
+     
+      
     );
   }
 }
