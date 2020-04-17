@@ -130,5 +130,27 @@
   padding: 2% !important;
 }
 
+.list {
+  margin-left: 20px;
+}
+/* .list :hover{
+    background-color: mediumblue;
+} */
+.rowlist {
+  color: black;
+  width: 80%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: lightslategray;
+  padding-left: 40px;
+  margin-top: 10px;
+}
+.rowlist:hover {
+  background-color: mediumblue;
+}
+.rowlist a {
+  color: black;
+}
+
 
 /*# sourceMappingURL=_app.js.chunk.css.map*/
