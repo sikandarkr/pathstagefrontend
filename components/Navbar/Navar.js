@@ -13,17 +13,15 @@ class Navbar extends Component {
           <Col span={24} md={24} xs={24}>
             <Row className="p-10">
               <Col span={4} md={4} xs={0}></Col>
-              <Col span={8} md={8} xs={24}>
+              <Col span={8} md={8} xs={12}>
                 <div className="search-area">
                   <Input placeholder="Search" />
                   
                 </div>
               </Col>
-              <Col span={0} md={4} xs={0}>
-               
-                  <span className="UserOutlined">
-        <UserOutlined />
-       
+              <Col span={4} md={4} xs={12}>
+                <span className="UserOutlined">
+                    <UserOutlined />
                 </span>
               </Col>
             </Row>

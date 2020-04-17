@@ -131,6 +131,24 @@
 }
 
 
+.list {
+  margin-left: 30px;
+}
+.rowList {
+  background-color: #f0f2f2;
+  border: 1px solid #f0f2f2;
+  margin-top: 10px;
+  width: 80%;
+  padding-left: 30px;
+  border-radius: 5px;
+}
+.rowList:hover {
+  background-color: lightgray;
+  color: white;
+}
+.rowList a {
+  color: grey;
+}
 
 .search-box button {
   border: none;
@@ -140,7 +158,7 @@
 }
 .UserOutlined {
   border-radius: 50%;
-  margin-left: 550px;
+  margin-left: 90%;
   background-color: white;
   font-size: 18px;
   background-color: lightgray;
