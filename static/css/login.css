@@ -87,6 +87,7 @@
   background-color: lightgray;
   text-align: center;
 }
+
 .search-button:hover {
   cursor: pointer;
 }

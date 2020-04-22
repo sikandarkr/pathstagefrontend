@@ -116,6 +116,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+//import phonix from '../../logo/phonix.jpg'
 // import "../../static/css/style.scss";
 class Input extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
   constructor(...args) {
@@ -123,7 +124,8 @@ class Input extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
 
     _defineProperty(this, "state", {
       buttonCss: "search-button",
-      inputCss: "input-fld"
+      inputCss: "input-fld",
+      inputText: ''
     });
 
     _defineProperty(this, "handleClick", () => {
@@ -139,6 +141,17 @@ class Input extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
         buttonCss: "search-button"
       });
     });
+
+    _defineProperty(this, "handleChange", e => {
+      this.setState({
+        inputText: e.target.value
+      });
+      event.preventDefault();
+    });
+
+    _defineProperty(this, "onSubmit", e => {
+      console.log(this.state.inputText);
+    });
   }
 
   render() {
@@ -149,16 +162,17 @@ class Input extends react__WEBPACK_IMPORTED_MODULE_2__["Component"] {
       className: "search-box"
     }, __jsx("input", {
       type: "text",
+      inputText: this.state.inputText,
       placeholder: this.props.placeholder,
       className: this.state.inputCss,
       onClick: this.handleClick,
-      onBlur: this.handleInputBlur
-    }), __jsx("span", {
-      className: this.state.buttonCss
+      onBlur: this.handleInputBlur,
+      onChange: this.handleChange
+    }), __jsx("button", {
+      className: this.state.buttonCss,
+      onClick: this.onSubmit
     }, __jsx(antd_lib_icon__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      style: {
-        fontSize: "20px"
-      },
+      className: "icon",
       type: "search"
     })));
   }
@@ -192,6 +206,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ant-design/icons */ "@ant-design/icons");
 /* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _pages_About1__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../pages/About1 */ "./pages/About1.js");
 
 
 
@@ -201,6 +216,8 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement;
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
+
+ // import "../../static/css/style.scss";
 
 
 
@@ -215,36 +232,26 @@ class SideMenuLeft extends react__WEBPACK_IMPORTED_MODULE_4__["Component"] {
     return __jsx(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a, {
       className: "list"
     }, __jsx(antd_lib_row__WEBPACK_IMPORTED_MODULE_3___default.a, {
-      className: "rowlist"
-    }, __jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_6__["UserOutlined"], null), __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
-      href: ""
-    }, __jsx("a", {
-      href: "/"
-    }, "About"))), __jsx(antd_lib_row__WEBPACK_IMPORTED_MODULE_3___default.a, {
-      className: "rowlist"
-    }, __jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_6__["UserOutlined"], null), __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
-      href: ""
-    }, __jsx("a", {
-      href: "/"
-    }, "Devloper"))), __jsx(antd_lib_row__WEBPACK_IMPORTED_MODULE_3___default.a, {
-      className: "rowlist"
-    }, __jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_6__["GlobalOutlined"], null), __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
-      href: ""
-    }, __jsx("a", {
-      href: "/"
-    }, "Career"))), __jsx(antd_lib_row__WEBPACK_IMPORTED_MODULE_3___default.a, {
-      className: "rowlist"
-    }, __jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_6__["UserOutlined"], null), __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
-      href: ""
-    }, __jsx("a", {
-      href: "/"
-    }, "More"))), __jsx(antd_lib_row__WEBPACK_IMPORTED_MODULE_3___default.a, {
-      className: "rowlist"
-    }, __jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_6__["WechatOutlined"], null), __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
-      href: ""
-    }, __jsx("a", {
-      href: "/"
-    }, "Help"))));
+      className: "rowList"
+    }, __jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_6__["AndroidOutlined"], null), __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      href: "/about"
+    }, "About")), __jsx(antd_lib_row__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      className: "rowList"
+    }, __jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_6__["AppleOutlined"], null), __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      href: "/developer"
+    }, "Developer")), __jsx(antd_lib_row__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      className: "rowList"
+    }, __jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_6__["IeOutlined"], null), __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      href: "/career"
+    }, "Career")), __jsx(antd_lib_row__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      className: "rowList"
+    }, __jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_6__["GithubOutlined"], null), __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      href: "/more"
+    }, "More")), __jsx(antd_lib_row__WEBPACK_IMPORTED_MODULE_3___default.a, {
+      className: "rowList"
+    }, __jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_6__["TwitterOutlined"], null), __jsx(next_link__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      href: "/help"
+    }, "Help")));
   }
 
 }
@@ -812,9 +819,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd_lib_col__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(antd_lib_col__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-redux */ "react-redux");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _Common_Input__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Common/Input */ "./components/Common/Input.js");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ant-design/icons */ "@ant-design/icons");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-redux */ "react-redux");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _Common_Input__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Common/Input */ "./components/Common/Input.js");
 
 
 
@@ -823,7 +832,9 @@ __webpack_require__.r(__webpack_exports__);
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement;
 
-// import { fetchProfiles } from "../../redux/actions/dashboardAction";
+//import {images} from '../../static/images/phonix.jpg'
+ // import { fetchProfiles } from "../../redux/actions/dashboardAction";
+
 
 
 
@@ -844,12 +855,18 @@ class Navbar extends react__WEBPACK_IMPORTED_MODULE_6__["Component"] {
     }), __jsx(antd_lib_col__WEBPACK_IMPORTED_MODULE_5___default.a, {
       span: 8,
       md: 8,
-      xs: 24
+      xs: 12
     }, __jsx("div", {
       className: "search-area"
-    }, __jsx(_Common_Input__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    }, __jsx(_Common_Input__WEBPACK_IMPORTED_MODULE_9__["default"], {
       placeholder: "Search"
-    })))))));
+    }))), __jsx(antd_lib_col__WEBPACK_IMPORTED_MODULE_5___default.a, {
+      span: 4,
+      md: 4,
+      xs: 12
+    }, __jsx("span", {
+      className: "UserOutlined"
+    }, __jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_7__["UserOutlined"], null)))))));
   }
 
 }
@@ -867,7 +884,7 @@ function mapDispatchToProps(dispatch) {//   return {
   //   };
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_7__["connect"])(mapStateToProps, mapDispatchToProps)(Navbar));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_8__["connect"])(mapStateToProps, mapDispatchToProps)(Navbar));
 
 /***/ }),
 
@@ -2570,6 +2587,29 @@ exports.ST = exports.SP && typeof performance.mark === 'function' && typeof perf
 
 module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/next/dist/client/link.js")
 
+
+/***/ }),
+
+/***/ "./pages/About1.js":
+/*!*************************!*\
+  !*** ./pages/About1.js ***!
+  \*************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return About1; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+class About1 extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return __jsx("div", null);
+  }
+
+}
 
 /***/ }),
 

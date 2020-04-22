@@ -18,6 +18,13 @@ module.exports = (phase, { defaultConfig }) => {
   const path = require("path");
 
   // Where your antd-custom.less file lives
+  // next.config.js
+const withImages = require('next-images')
+module.exports = withImages({
+  webpack(config, options) {
+    return config
+  }
+})
   const themeVariables = lessToJS(fs.readFileSync(path.resolve(__dirname, "./assets/antd-custom.less"), "utf8"));
 
   // fix: prevents error when .less files are required by node
@@ -31,4 +38,6 @@ module.exports = (phase, { defaultConfig }) => {
       modifyVars: themeVariables // make your antd custom effective
     }
   });
+  // next.config.js
+
 };

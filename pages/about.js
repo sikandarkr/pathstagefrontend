@@ -1,7 +1,8 @@
-const About = () =>(
-    <section>
-        <h1>About Next Js</h1>
-    </section>
-);
-export default About;
+import Link from "next/link";
+const About = () =>{
+    return <div>
+        <Link href='About'>helllo</Link>
+    </div>
+}
 
+export default About;

@@ -1,10 +1,15 @@
 import React, { Component } from "react";
 import { Tooltip, Icon } from "antd";
+
+//import phonix from '../../logo/phonix.jpg'
+
 // import "../../static/css/style.scss";
 class Input extends Component {
   state = {
     buttonCss: "search-button",
-    inputCss: "input-fld"
+    inputCss: "input-fld",
+    inputText:''
+
   };
   handleClick = () => {
     this.setState({
@@ -18,21 +23,37 @@ class Input extends Component {
       buttonCss: "search-button"
     });
   };
+  handleChange=(e)=>{
+    this.setState({inputText:e.target.value})
+    event.preventDefault();
+  }
+  onSubmit=(e)=>{
+     
+     console.log(this.state.inputText)
+  }
   render() {
     const { users } = this.props;
     return (
       <div className="search-box">
+        
+  {/* <img src={phonix} /> */}
+  {/* <Icon component={() => (<img src="../../static/phonix.jpg"/>)} style={{fontSize:'20px'}}/> */}
         <input
           type="text"
+          inputText={this.state.inputText}
           placeholder={this.props.placeholder}
           className={this.state.inputCss}
           onClick={this.handleClick}
           onBlur={this.handleInputBlur}
+          onChange={this.handleChange}
         />
-        <span className={this.state.buttonCss}>
-          <Icon style={{ fontSize: "20px" }} type="search" />
-        </span>
+        <button className={this.state.buttonCss}  onClick={this.onSubmit}>
+          <Icon className="icon"  type="search" />
+        </button>
+        
       </div>
+     
+      
     );
   }
 }
